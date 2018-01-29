@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Skyrocket
+Comment=Skyrocket P2P Cryptocurrency
+Comment[fr]=Skyrocket, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Skyrocket, eşten eşe kriptografik sanal para birimi
+Exec=skyrocket-qt %u
+Terminal=false
+Type=Application
+Icon=skyrocket128
+MimeType=x-scheme-handler/skyrocket;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+[Unit]
+Description=Skyrocket's distributed currency daemon
+After=network.target
+
+[Service]
+User=skyrocket
+Group=skyrocket
+
+Type=forking
+PIDFile=/var/lib/skyrocketd/skyrocketd.pid
+
+ExecStart=/usr/bin/skyrocketd -daemon -pid=/var/lib/skyrocketd/skyrocketd.pid \
+          -conf=/etc/skyrocket/skyrocket.conf -datadir=/var/lib/skyrocketd
+
+ExecStop=-/usr/bin/skyrocket-cli -conf=/etc/skyrocket/skyrocket.conf \
+         -datadir=/var/lib/skyrocketd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

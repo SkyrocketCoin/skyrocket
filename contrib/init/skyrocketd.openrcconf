@@ -1,0 +1,26 @@
+# /etc/conf.d/skyrocketd: config file for /etc/init.d/skyrocketd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/skyrocket/skyrocket.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/skyrocketd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/skyrocketd.pid"
+
+# Where to write skyrocketd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/skyrocketd"
+
+# User and group to own skyrocketd process
+#BITCOIND_USER="skyrocket"
+#BITCOIND_GROUP="skyrocket"
+
+# Path to skyrocketd executable
+#BITCOIND_BIN="/usr/bin/skyrocketd"
+
+# Nice value to run skyrocketd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
